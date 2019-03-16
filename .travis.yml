@@ -54,13 +54,13 @@ script:
 jobs:
   include:
     - stage: Quality
-      php: 7.1
-      script:  amethyst test:phpstan --verbose
+      php: 7.2
+      script: composer update && amethyst test:phpstan --verbose
     - stage: Style
-      php: 7.1
-      script: amethyst test:style --verbose
+      php: 7.2
+      script: composer update && amethyst test:style --verbose
     - stage: Deploy Documentation
-      php: 7.1
+      php: 7.2
       script:
         - php artisan amethyst:documentation:publishable
       deploy:
