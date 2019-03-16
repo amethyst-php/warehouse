@@ -59,14 +59,3 @@ jobs:
     - stage: Style
       php: 7.2
       script: composer update && amethyst test:style --verbose
-    - stage: Deploy Documentation
-      php: 7.2
-      script:
-        - php artisan amethyst:documentation:publishable
-      deploy:
-        provider: pages
-        skip-cleanup: true
-        github-token: $GITHUB_TOKEN
-        local-dir: docs
-        on:
-          branch: master
