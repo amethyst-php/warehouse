@@ -24,7 +24,8 @@ class StockSchema extends Schema
                 ->setRelationName('warehouse')
                 ->setRelationManager(WarehouseManager::class)
                 ->setRequired(true),
-            Attributes\NumberAttribute::make('stock'),
+            Attributes\NumberAttribute::make('stock')
+                ->setRequired(true),
             Attributes\EnumAttribute::make('stockable_type', array_keys($stockableConfig))
                 ->setRequired(true),
             Attributes\MorphToAttribute::make('stockable_id')
