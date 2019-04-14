@@ -10,7 +10,10 @@ abstract class BaseTest extends \Orchestra\Testbench\TestCase
     public function setUp(): void
     {
         parent::setUp();
+        
         $this->artisan('migrate:fresh');
+
+        app('amethyst')->pushMorphRelation('stock', 'stockable', 'foo');
     }
 
     protected function getPackageProviders($app)

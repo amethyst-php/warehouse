@@ -18,7 +18,7 @@ class StockFaker extends Faker
         $bag = new Bag();
         $bag->set('warehouse', WarehouseFaker::make()->parameters()->toArray());
         $bag->set('stock', 10);
-        $bag->set('stockable_type', \Railken\Amethyst\Models\Foo::class);
+        $bag->set('stockable_type', 'foo');
         $bag->set('stockable', FooFaker::make()->parameters()->toArray());
 
         return $bag;
