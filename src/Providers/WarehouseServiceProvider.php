@@ -17,6 +17,5 @@ class WarehouseServiceProvider extends CommonServiceProvider
         \Illuminate\Database\Eloquent\Builder::macro('stocks', function (): MorphMany {
             return app('amethyst')->createMacroMorphRelation($this, \Railken\Amethyst\Models\Stock::class, 'stocks', 'stockable');
         });
-
     }
 }
