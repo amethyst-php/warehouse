@@ -10,9 +10,9 @@ class WarehouseServiceProvider extends CommonServiceProvider
     /**
      * @inherit
      */
-    public function register()
+    public function boot()
     {
-        parent::register();
+        parent::boot();
 
         \Illuminate\Database\Eloquent\Builder::macro('stocks', function (): MorphMany {
             return app('amethyst')->createMacroMorphRelation($this, \Railken\Amethyst\Models\Stock::class, 'stocks', 'stockable');
