@@ -29,7 +29,7 @@ class Stock extends Model implements EntityContract
      */
     public function warehouse(): BelongsTo
     {
-        return $this->belongsTo(Warehouse::class);
+        return $this->belongsTo(config('amethyst.warehouse.data.warehouse.model'));
     }
 
     /**
