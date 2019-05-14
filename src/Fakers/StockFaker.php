@@ -17,6 +17,7 @@ class StockFaker extends Faker
 
         $bag = new Bag();
         $bag->set('warehouse', WarehouseFaker::make()->parameters()->toArray());
+        $bag->set('key', 10);
         $bag->set('stock', 10);
         $bag->set('stockable_type', 'foo');
         $bag->set('stockable', FooFaker::make()->parameters()->toArray());

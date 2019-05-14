@@ -21,6 +21,7 @@ class StockSchema extends Schema
                 ->setRelationName('warehouse')
                 ->setRelationManager(WarehouseManager::class)
                 ->setRequired(true),
+            Attributes\TextAttribute::make('key'),
             Attributes\NumberAttribute::make('stock')
                 ->setRequired(true),
             Attributes\EnumAttribute::make('stockable_type', app('amethyst')->getMorphListable('stock', 'stockable'))

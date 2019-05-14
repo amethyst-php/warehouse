@@ -16,6 +16,7 @@ class CreateStocksTable extends Migration
             $table->increments('id');
             $table->integer('warehouse_id')->unsigned();
             $table->foreign('warehouse_id')->references('id')->on(Config::get('amethyst.warehouse.data.warehouse.table'));
+            $table->string('key')->nullable();
             $table->float('stock')->default(0);
             $table->string('stockable_type');
             $table->integer('stockable_id')->unsigend();
