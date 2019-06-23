@@ -14,7 +14,7 @@ abstract class BaseTest extends \Orchestra\Testbench\TestCase
         parent::setUp();
 
         $this->artisan('migrate:fresh');
-
+        
         app('amethyst')->pushMorphRelation('stock', 'stockable', 'foo');
     }
 
@@ -24,12 +24,5 @@ abstract class BaseTest extends \Orchestra\Testbench\TestCase
             \Railken\Amethyst\Providers\WarehouseServiceProvider::class,
             \Railken\Amethyst\Providers\FooServiceProvider::class,
         ];
-    }
-
-    protected function getEnvironmentSetUp($app)
-    {
-        $app->useEnvironmentPath(__DIR__.'/..');
-        $app->bootstrapWith([LoadEnvironmentVariables::class]);
-        parent::getEnvironmentSetUp($app);
     }
 }
