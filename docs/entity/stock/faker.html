@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <base href="/amethyst-warehouse/">
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link href="https://fonts.googleapis.com/css?family=Roboto|Rubik|Open Sans" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <script src='https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js'></script>
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+  <link href='style.css' rel='stylesheet'>
+</head>
+<body>
+  <header>
+    <a class="btn purple">Switch to frontend docs</a>
+  </header>
+  <main>
+    <div class="sidebar" style='display: flex'>
+      <div style='flex-grow: 1'>
+      </div>
+      <div class="navigation">
+        <ul>
+          <li><a href=''>Installation</a></li>
+                    <li><a href='entity/stock/'>stock</a></li>
+                    <li><a href='entity/warehouse/'>warehouse</a></li>
+                  </ul>
+      </div>
+    </div>
+    <div class="container">
+      <div class="content">
+        <h2>Railken\Amethyst\Fakers\StockFaker</h2>
+
+<p>The faker can be used for testing or seeding.</p>
+
+<p>Create a new entity using the faker</p>
+
+<pre><code class="php">use Railken\Amethyst\Fakers\StockFaker;
+
+$result = $manager-&gt;create(StockFaker::make()-&gt;parameters());
+</code></pre>
+
+<h4>Extend the class</h4>
+
+<p>Create the new faker in <code>app/Fakers/StockFaker</code></p>
+
+<pre><code class="php">namespace App\Fakers;
+
+use Railken\Amethyst\Fakers\StockFaker as Faker;
+
+class StockFaker extends Faker {
+    // ...
+}
+</code></pre>
+
+<p>Update the file <code>configs/amethyst.warehouse</code> with the new class</p>
+
+<pre><code class="php">return [
+    'data' =&gt; [
+        'stock' =&gt; [
+            'faker' =&gt; App\Fakers\StockFaker::class,
+        ],
+    ]
+];
+</code></pre>
+
+<hr />
+
+<p><a href="index.html">Back</a></p>
+
+      </div>
+    </div>
+  </main>
+</body>
+</html>
