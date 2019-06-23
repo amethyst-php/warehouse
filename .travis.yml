@@ -42,6 +42,7 @@ before_script:
   - echo 'assert.exception=On' >> ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/travis.ini
   - phpenv config-rm xdebug.ini
   - composer global require railken/cli-amethyst
+  - composer global require railken/artisan
   - export PATH="$HOME/.config/composer/vendor/bin:$PATH"
 
 script:
