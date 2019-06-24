@@ -29,6 +29,10 @@ env:
   global:
     - DEFAULT_COMPOSER_FLAGS="--no-interaction --no-ansi --no-progress --no-suggest"
 
+cache:
+  directories:
+    - $HOME/.composer/cache/files
+
 before_script:
   - mysql_upgrade -u root 
   - mysql -h localhost -e "CREATE DATABASE forge;"
