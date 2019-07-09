@@ -3,7 +3,7 @@
 Define a new instance of the [Manager](manager.md)
 
 ```php
-use Railken\Amethyst\Managers\WarehouseManager;
+use Amethyst\Managers\WarehouseManager;
 
 $manager = new WarehouseManager();
 ```

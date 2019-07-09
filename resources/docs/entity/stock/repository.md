@@ -1,9 +1,9 @@
-## Railken\Amethyst\Repositories\StockRepository
+## Amethyst\Repositories\StockRepository
 
 The repository is the class to perform queries.
 
 ```php
-use Railken\Amethyst\Managers\StockManager;
+use Amethyst\Managers\StockManager;
 
 $manager = new StockManager();
 
@@ -38,7 +38,7 @@ Create the new repository in `app/Repositories/StockRepository`
 ```php
 namespace App\Repositories;
 
-use Railken\Amethyst\Repositories\StockRepository as Repository;
+use Amethyst\Repositories\StockRepository as Repository;
 
 class StockRepository extends Repository {
 	// ...

@@ -1,4 +1,4 @@
-## Railken\Amethyst\Validators\WarehouseValidator
+## Amethyst\Validators\WarehouseValidator
 
 The validator is used during any operation that manipulate the data to check if the parameters are correct. Remember that each attribute has is own validation.
 
@@ -8,7 +8,7 @@ Create the new validator in `app/Validators/WarehouseValidator`
 ```php
 namespace App\Validators;
 
-use Railken\Amethyst\Validators\WarehouseValidator as Validator;
+use Amethyst\Validators\WarehouseValidator as Validator;
 
 class WarehouseValidator extends Validator {
 	// ...

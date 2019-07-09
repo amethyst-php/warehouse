@@ -27,13 +27,13 @@
     </div>
     <div class="container">
       <div class="content">
-        <h2>Railken\Amethyst\Fakers\StockFaker</h2>
+        <h2>Amethyst\Fakers\StockFaker</h2>
 
 <p>The faker can be used for testing or seeding.</p>
 
 <p>Create a new entity using the faker</p>
 
-<pre><code class="php">use Railken\Amethyst\Fakers\StockFaker;
+<pre><code class="php">use Amethyst\Fakers\StockFaker;
 
 $result = $manager-&gt;create(StockFaker::make()-&gt;parameters());
 </code></pre>
@@ -44,7 +44,7 @@ $result = $manager-&gt;create(StockFaker::make()-&gt;parameters());
 
 <pre><code class="php">namespace App\Fakers;
 
-use Railken\Amethyst\Fakers\StockFaker as Faker;
+use Amethyst\Fakers\StockFaker as Faker;
 
 class StockFaker extends Faker {
     // ...

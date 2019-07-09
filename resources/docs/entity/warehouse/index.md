@@ -39,14 +39,14 @@ Let's first check the list of all attributes
 
 ## <a name="model"></a>Model
 
-Base class ```Railken\Amethyst\Models\Warehouse```
+Base class ```Amethyst\Models\Warehouse```
 
 You can extends the class like the following example in  `app/Models/Warehouse`
 
 ```php
 namespace App\Models;
 
-use Railken\Amethyst\Models\Warehouse as Model;
+use Amethyst\Models\Warehouse as Model;
 
 class Warehouse extends Model {
 	// ...
@@ -56,7 +56,7 @@ Remember to update the configuration with new class.
 
 ## <a name="manager"></a>Manager
 
-Base class ```Railken\Amethyst\Managers\WarehouseManager```
+Base class ```Amethyst\Managers\WarehouseManager```
 
 The manager is the main class to access and manipulate your model.
 
@@ -67,7 +67,7 @@ You can extends the class like the following example in `app/Managers/WarehouseM
 ```php
 namespace App\Managers;
 
-use Railken\Amethyst\Managers\WarehouseManager as Manager;
+use Amethyst\Managers\WarehouseManager as Manager;
 
 class WarehouseManager extends Manager {
 	// ...
@@ -80,7 +80,7 @@ Remember to update the configuration with new class.
 First you have to define a new instance of the [Manager](#manager)
 
 ```php
-use Railken\Amethyst\Managers\WarehouseManager;
+use Amethyst\Managers\WarehouseManager;
 
 $manager = new WarehouseManager();
 ```
@@ -133,7 +133,7 @@ try {
 Define a new instance of the [Manager](#manager)
 
 ```php
-use Railken\Amethyst\Managers\WarehouseManager;
+use Amethyst\Managers\WarehouseManager;
 
 $manager = new WarehouseManager();
 ```
@@ -161,7 +161,7 @@ $result = $manager->update($entity, $params);
 Define a new instance of the [Manager](#manager)
 
 ```php
-use Railken\Amethyst\Managers\WarehouseManager;
+use Amethyst\Managers\WarehouseManager;
 
 $manager = new WarehouseManager();
 ```
@@ -177,7 +177,7 @@ $result = $manager->remove($entity);
 Once you've got the result you should always check if an error has occurred, if not, retrieve the resource.
 
 ```php
-use Railken\Amethyst\Managers\WarehouseManager;
+use Amethyst\Managers\WarehouseManager;
 
 $manager = new WarehouseManager();
 
@@ -216,7 +216,7 @@ if ($result->ok()) {
 
 ## <a name="schema"></a>Schema
 
-Base class ```Railken\Amethyst\Schemas\WarehouseSchema```
+Base class ```Amethyst\Schemas\WarehouseSchema```
 
 The schema is used to define the structure of the attributes. All the $attributes in the [model](#model) and in the [manager](#manager) are initialized by the schema.
 
@@ -224,7 +224,7 @@ You can extends the class like the following example in  `app/Schemas/WarehouseS
 ```php
 namespace App\Schemas;
 
-use Railken\Amethyst\Schemas\WarehouseSchema as Schema;
+use Amethyst\Schemas\WarehouseSchema as Schema;
 
 class WarehouseSchema extends Schema {
 	// ...
@@ -234,12 +234,12 @@ Remember to update the configuration with new class.
 
 ## <a name="repository"></a>Repository
 
-Base class ```Railken\Amethyst\Repositories\WarehouseRepository```
+Base class ```Amethyst\Repositories\WarehouseRepository```
 
 The repository is the class used to perform queries.
 
 ```php
-use Railken\Amethyst\Managers\WarehouseManager;
+use Amethyst\Managers\WarehouseManager;
 
 $manager = new WarehouseManager();
 
@@ -270,7 +270,7 @@ You can extends the class like the following example in `app/Repositories/Wareho
 ```php
 namespace App\Repositories;
 
-use Railken\Amethyst\Repositories\WarehouseRepository as Repository;
+use Amethyst\Repositories\WarehouseRepository as Repository;
 
 class WarehouseRepository extends Repository {
 	// ...
@@ -280,12 +280,12 @@ Remember to update the configuration with new class.
 
 ## <a name="serializer"></a>Serializer
 
-Base class ```Railken\Amethyst\Serializers\WarehouseSerializer```
+Base class ```Amethyst\Serializers\WarehouseSerializer```
 
 The serializer is used to serialize an entity, you can retrieve it from the data.
 
 ```php
-use Railken\Amethyst\Managers\WarehouseManager;
+use Amethyst\Managers\WarehouseManager;
 
 $manager = new WarehouseManager();
 
@@ -303,7 +303,7 @@ You can extends the class like the following example in `app/Serializers/Warehou
 ```php
 namespace App\Serializers;
 
-use Railken\Amethyst\Serializers\WarehouseSerializer as Serializer;
+use Amethyst\Serializers\WarehouseSerializer as Serializer;
 
 class WarehouseSerializer extends Serializer {
 	// ...
@@ -313,14 +313,14 @@ Remember to update the configuration with new class.
 
 ## <a name="faker"></a>Faker
 
-Base class ```Railken\Amethyst\Fakers\WarehouseFaker```
+Base class ```Amethyst\Fakers\WarehouseFaker```
 
 The faker can be used for testing or seeding.
 
 Create a new entity using the faker
 
 ```php
-use Railken\Amethyst\Fakers\WarehouseFaker;
+use Amethyst\Fakers\WarehouseFaker;
 
 $result = $manager->create(WarehouseFaker::make()->parameters());
 ```
@@ -329,7 +329,7 @@ You can extends the class like the following example in `app/Fakers/WarehouseFak
 ```php
 namespace App\Fakers;
 
-use Railken\Amethyst\Fakers\WarehouseFaker as Faker;
+use Amethyst\Fakers\WarehouseFaker as Faker;
 
 class WarehouseFaker extends Faker {
 	// ...

@@ -1,4 +1,4 @@
-## Railken\Amethyst\Managers\WarehouseManager
+## Amethyst\Managers\WarehouseManager
 
 The manager is the main class to access and manipulate your model.
 
@@ -22,7 +22,7 @@ Create the new manager in `app/Managers/WarehouseManager`
 ```php
 namespace App\Managers;
 
-use Railken\Amethyst\Managers\WarehouseManager as Manager;
+use Amethyst\Managers\WarehouseManager as Manager;
 
 class WarehouseManager extends Manager {
 	// ...

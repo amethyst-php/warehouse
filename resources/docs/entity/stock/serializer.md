@@ -1,9 +1,9 @@
-## Railken\Amethyst\Serializers\StockSerializer
+## Amethyst\Serializers\StockSerializer
 
 The serializer is used to serialize an entity, you can retrieve it from the data.
 
 ```php
-use Railken\Amethyst\Managers\StockManager;
+use Amethyst\Managers\StockManager;
 
 $manager = new StockManager();
 
@@ -23,7 +23,7 @@ Create the new serializer in `app/Serializers/StockSerializer`
 ```php
 namespace App\Serializers;
 
-use Railken\Amethyst\Serializers\StockSerializer as Serializer;
+use Amethyst\Serializers\StockSerializer as Serializer;
 
 class StockSerializer extends Serializer {
 	// ...

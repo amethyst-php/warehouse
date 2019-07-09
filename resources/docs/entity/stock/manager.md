@@ -1,4 +1,4 @@
-## Railken\Amethyst\Managers\StockManager
+## Amethyst\Managers\StockManager
 
 The manager is the main class to access and manipulate your model.
 
@@ -22,7 +22,7 @@ Create the new manager in `app/Managers/StockManager`
 ```php
 namespace App\Managers;
 
-use Railken\Amethyst\Managers\StockManager as Manager;
+use Amethyst\Managers\StockManager as Manager;
 
 class StockManager extends Manager {
 	// ...

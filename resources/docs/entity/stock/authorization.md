@@ -22,7 +22,7 @@ interface AgentContract
 You can use whatever permission-library suits you to implement this method
 
 ```php
-use Railken\Amethyst\Managers\StockManager;
+use Amethyst\Managers\StockManager;
 
 $manager = new StockManager($user);
 ```

@@ -42,14 +42,14 @@ Let's first check the list of all attributes
 
 ## <a name="model"></a>Model
 
-Base class ```Railken\Amethyst\Models\Stock```
+Base class ```Amethyst\Models\Stock```
 
 You can extends the class like the following example in  `app/Models/Stock`
 
 ```php
 namespace App\Models;
 
-use Railken\Amethyst\Models\Stock as Model;
+use Amethyst\Models\Stock as Model;
 
 class Stock extends Model {
 	// ...
@@ -59,7 +59,7 @@ Remember to update the configuration with new class.
 
 ## <a name="manager"></a>Manager
 
-Base class ```Railken\Amethyst\Managers\StockManager```
+Base class ```Amethyst\Managers\StockManager```
 
 The manager is the main class to access and manipulate your model.
 
@@ -70,7 +70,7 @@ You can extends the class like the following example in `app/Managers/StockManag
 ```php
 namespace App\Managers;
 
-use Railken\Amethyst\Managers\StockManager as Manager;
+use Amethyst\Managers\StockManager as Manager;
 
 class StockManager extends Manager {
 	// ...
@@ -83,7 +83,7 @@ Remember to update the configuration with new class.
 First you have to define a new instance of the [Manager](#manager)
 
 ```php
-use Railken\Amethyst\Managers\StockManager;
+use Amethyst\Managers\StockManager;
 
 $manager = new StockManager();
 ```
@@ -162,7 +162,7 @@ try {
 Define a new instance of the [Manager](#manager)
 
 ```php
-use Railken\Amethyst\Managers\StockManager;
+use Amethyst\Managers\StockManager;
 
 $manager = new StockManager();
 ```
@@ -203,7 +203,7 @@ $result = $manager->update($entity, $params);
 Define a new instance of the [Manager](#manager)
 
 ```php
-use Railken\Amethyst\Managers\StockManager;
+use Amethyst\Managers\StockManager;
 
 $manager = new StockManager();
 ```
@@ -219,7 +219,7 @@ $result = $manager->remove($entity);
 Once you've got the result you should always check if an error has occurred, if not, retrieve the resource.
 
 ```php
-use Railken\Amethyst\Managers\StockManager;
+use Amethyst\Managers\StockManager;
 
 $manager = new StockManager();
 
@@ -271,7 +271,7 @@ if ($result->ok()) {
 
 ## <a name="schema"></a>Schema
 
-Base class ```Railken\Amethyst\Schemas\StockSchema```
+Base class ```Amethyst\Schemas\StockSchema```
 
 The schema is used to define the structure of the attributes. All the $attributes in the [model](#model) and in the [manager](#manager) are initialized by the schema.
 
@@ -279,7 +279,7 @@ You can extends the class like the following example in  `app/Schemas/StockSchem
 ```php
 namespace App\Schemas;
 
-use Railken\Amethyst\Schemas\StockSchema as Schema;
+use Amethyst\Schemas\StockSchema as Schema;
 
 class StockSchema extends Schema {
 	// ...
@@ -289,12 +289,12 @@ Remember to update the configuration with new class.
 
 ## <a name="repository"></a>Repository
 
-Base class ```Railken\Amethyst\Repositories\StockRepository```
+Base class ```Amethyst\Repositories\StockRepository```
 
 The repository is the class used to perform queries.
 
 ```php
-use Railken\Amethyst\Managers\StockManager;
+use Amethyst\Managers\StockManager;
 
 $manager = new StockManager();
 
@@ -325,7 +325,7 @@ You can extends the class like the following example in `app/Repositories/StockR
 ```php
 namespace App\Repositories;
 
-use Railken\Amethyst\Repositories\StockRepository as Repository;
+use Amethyst\Repositories\StockRepository as Repository;
 
 class StockRepository extends Repository {
 	// ...
@@ -335,12 +335,12 @@ Remember to update the configuration with new class.
 
 ## <a name="serializer"></a>Serializer
 
-Base class ```Railken\Amethyst\Serializers\StockSerializer```
+Base class ```Amethyst\Serializers\StockSerializer```
 
 The serializer is used to serialize an entity, you can retrieve it from the data.
 
 ```php
-use Railken\Amethyst\Managers\StockManager;
+use Amethyst\Managers\StockManager;
 
 $manager = new StockManager();
 
@@ -358,7 +358,7 @@ You can extends the class like the following example in `app/Serializers/StockSe
 ```php
 namespace App\Serializers;
 
-use Railken\Amethyst\Serializers\StockSerializer as Serializer;
+use Amethyst\Serializers\StockSerializer as Serializer;
 
 class StockSerializer extends Serializer {
 	// ...
@@ -368,14 +368,14 @@ Remember to update the configuration with new class.
 
 ## <a name="faker"></a>Faker
 
-Base class ```Railken\Amethyst\Fakers\StockFaker```
+Base class ```Amethyst\Fakers\StockFaker```
 
 The faker can be used for testing or seeding.
 
 Create a new entity using the faker
 
 ```php
-use Railken\Amethyst\Fakers\StockFaker;
+use Amethyst\Fakers\StockFaker;
 
 $result = $manager->create(StockFaker::make()->parameters());
 ```
@@ -384,7 +384,7 @@ You can extends the class like the following example in `app/Fakers/StockFaker`
 ```php
 namespace App\Fakers;
 
-use Railken\Amethyst\Fakers\StockFaker as Faker;
+use Amethyst\Fakers\StockFaker as Faker;
 
 class StockFaker extends Faker {
 	// ...

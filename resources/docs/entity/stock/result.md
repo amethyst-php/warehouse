@@ -3,7 +3,7 @@
 Once you've got the result you should always check if an error has occurred, if not, retrieve the resource.
 
 ```php
-use Railken\Amethyst\Managers\StockManager;
+use Amethyst\Managers\StockManager;
 
 $manager = new StockManager();
 

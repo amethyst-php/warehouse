@@ -1,9 +1,9 @@
-## Railken\Amethyst\Repositories\WarehouseRepository
+## Amethyst\Repositories\WarehouseRepository
 
 The repository is the class to perform queries.
 
 ```php
-use Railken\Amethyst\Managers\WarehouseManager;
+use Amethyst\Managers\WarehouseManager;
 
 $manager = new WarehouseManager();
 
@@ -38,7 +38,7 @@ Create the new repository in `app/Repositories/WarehouseRepository`
 ```php
 namespace App\Repositories;
 
-use Railken\Amethyst\Repositories\WarehouseRepository as Repository;
+use Amethyst\Repositories\WarehouseRepository as Repository;
 
 class WarehouseRepository extends Repository {
 	// ...

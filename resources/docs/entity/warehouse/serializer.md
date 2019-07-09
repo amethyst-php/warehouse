@@ -1,9 +1,9 @@
-## Railken\Amethyst\Serializers\WarehouseSerializer
+## Amethyst\Serializers\WarehouseSerializer
 
 The serializer is used to serialize an entity, you can retrieve it from the data.
 
 ```php
-use Railken\Amethyst\Managers\WarehouseManager;
+use Amethyst\Managers\WarehouseManager;
 
 $manager = new WarehouseManager();
 
@@ -23,7 +23,7 @@ Create the new serializer in `app/Serializers/WarehouseSerializer`
 ```php
 namespace App\Serializers;
 
-use Railken\Amethyst\Serializers\WarehouseSerializer as Serializer;
+use Amethyst\Serializers\WarehouseSerializer as Serializer;
 
 class WarehouseSerializer extends Serializer {
 	// ...

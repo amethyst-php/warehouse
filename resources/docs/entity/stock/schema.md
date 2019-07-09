@@ -1,4 +1,4 @@
-## Railken\Amethyst\Schemas\StockSchema
+## Amethyst\Schemas\StockSchema
 
 The schema is used to define the structure of the attributes. All the $attributes in the [model](model.md) and in the [manager](manager.md) are initialized by the schema.
 
@@ -8,7 +8,7 @@ Create the new schema in `app/Schemas/StockSchema`
 ```php
 namespace App\Schemas;
 
-use Railken\Amethyst\Schemas\StockSchema as Schema;
+use Amethyst\Schemas\StockSchema as Schema;
 
 class StockSchema extends Schema {
 	// ...

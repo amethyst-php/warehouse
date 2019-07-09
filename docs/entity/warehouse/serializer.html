@@ -27,11 +27,11 @@
     </div>
     <div class="container">
       <div class="content">
-        <h2>Railken\Amethyst\Serializers\WarehouseSerializer</h2>
+        <h2>Amethyst\Serializers\WarehouseSerializer</h2>
 
 <p>The serializer is used to serialize an entity, you can retrieve it from the data.</p>
 
-<pre><code class="php">use Railken\Amethyst\Managers\WarehouseManager;
+<pre><code class="php">use Amethyst\Managers\WarehouseManager;
 
 $manager = new WarehouseManager();
 
@@ -51,7 +51,7 @@ $serializer-&gt;serialize($entity)-&gt;toArray(); // Returns an array
 
 <pre><code class="php">namespace App\Serializers;
 
-use Railken\Amethyst\Serializers\WarehouseSerializer as Serializer;
+use Amethyst\Serializers\WarehouseSerializer as Serializer;
 
 class WarehouseSerializer extends Serializer {
     // ...

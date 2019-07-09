@@ -1,4 +1,4 @@
-## Railken\Amethyst\Authorizers\WarehouseAuthorizer
+## Amethyst\Authorizers\WarehouseAuthorizer
 
 The authorizer is used during any operation that manipulate the data to check if the agent is authorized or not
 
@@ -8,7 +8,7 @@ Create the new authorizer in `app/Authorizers/WarehouseAuthorizer`
 ```php
 namespace App\Authorizers;
 
-use Railken\Amethyst\Authorizers\WarehouseAuthorizer as Authorizer;
+use Amethyst\Authorizers\WarehouseAuthorizer as Authorizer;
 
 class WarehouseAuthorizer extends Authorizer {
 	// ...

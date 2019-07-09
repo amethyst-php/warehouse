@@ -1,10 +1,10 @@
 <?php
 
-namespace Railken\Amethyst\Tests\Managers;
+namespace Amethyst\Tests\Managers;
 
-use Railken\Amethyst\Fakers\WarehouseFaker;
-use Railken\Amethyst\Managers\WarehouseManager;
-use Railken\Amethyst\Tests\BaseTest;
+use Amethyst\Fakers\WarehouseFaker;
+use Amethyst\Managers\WarehouseManager;
+use Amethyst\Tests\BaseTest;
 use Railken\Lem\Support\Testing\TestableBaseTrait;
 
 class WarehouseTest extends BaseTest

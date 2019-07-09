@@ -1,4 +1,4 @@
-## Railken\Amethyst\Authorizers\StockAuthorizer
+## Amethyst\Authorizers\StockAuthorizer
 
 The authorizer is used during any operation that manipulate the data to check if the agent is authorized or not
 
@@ -8,7 +8,7 @@ Create the new authorizer in `app/Authorizers/StockAuthorizer`
 ```php
 namespace App\Authorizers;
 
-use Railken\Amethyst\Authorizers\StockAuthorizer as Authorizer;
+use Amethyst\Authorizers\StockAuthorizer as Authorizer;
 
 class StockAuthorizer extends Authorizer {
 	// ...

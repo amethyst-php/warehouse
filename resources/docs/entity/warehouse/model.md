@@ -1,4 +1,4 @@
-## Railken\Amethyst\Models\Warehouse
+## Amethyst\Models\Warehouse
 
 The model extends ```Illuminate\Database\Eloquent\Model``` class.
 
@@ -11,7 +11,7 @@ Create the new model in `app/Models/Warehouse`
 ```php
 namespace App\Models;
 
-use Railken\Amethyst\Models\Warehouse as Model;
+use Amethyst\Models\Warehouse as Model;
 
 class Warehouse extends Model {
 	// ...

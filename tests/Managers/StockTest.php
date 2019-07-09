@@ -1,10 +1,10 @@
 <?php
 
-namespace Railken\Amethyst\Tests\Managers;
+namespace Amethyst\Tests\Managers;
 
-use Railken\Amethyst\Fakers\StockFaker;
-use Railken\Amethyst\Managers\StockManager;
-use Railken\Amethyst\Tests\BaseTest;
+use Amethyst\Fakers\StockFaker;
+use Amethyst\Managers\StockManager;
+use Amethyst\Tests\BaseTest;
 use Railken\Lem\Support\Testing\TestableBaseTrait;
 
 class StockTest extends BaseTest

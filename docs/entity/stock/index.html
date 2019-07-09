@@ -148,13 +148,13 @@ You can publish the configuration through the command <code>php artisan vendor:p
 
 <h2><a name="model"></a>Model</h2>
 
-<p>Base class <code>Railken\Amethyst\Models\Stock</code></p>
+<p>Base class <code>Amethyst\Models\Stock</code></p>
 
 <p>You can extends the class like the following example in  <code>app/Models/Stock</code></p>
 
 <pre><code class="php">namespace App\Models;
 
-use Railken\Amethyst\Models\Stock as Model;
+use Amethyst\Models\Stock as Model;
 
 class Stock extends Model {
     // ...
@@ -165,7 +165,7 @@ class Stock extends Model {
 
 <h2><a name="manager"></a>Manager</h2>
 
-<p>Base class <code>Railken\Amethyst\Managers\StockManager</code></p>
+<p>Base class <code>Amethyst\Managers\StockManager</code></p>
 
 <p>The manager is the main class to access and manipulate your model.</p>
 
@@ -176,7 +176,7 @@ Remember that the manager return always a <a href="#result">Result</a>.</p>
 
 <pre><code class="php">namespace App\Managers;
 
-use Railken\Amethyst\Managers\StockManager as Manager;
+use Amethyst\Managers\StockManager as Manager;
 
 class StockManager extends Manager {
     // ...
@@ -189,7 +189,7 @@ class StockManager extends Manager {
 
 <p>First you have to define a new instance of the <a href="#manager">Manager</a></p>
 
-<pre><code class="php">use Railken\Amethyst\Managers\StockManager;
+<pre><code class="php">use Amethyst\Managers\StockManager;
 
 $manager = new StockManager();
 </code></pre>
@@ -264,7 +264,7 @@ try {
 
 <p>Define a new instance of the <a href="#manager">Manager</a></p>
 
-<pre><code class="php">use Railken\Amethyst\Managers\StockManager;
+<pre><code class="php">use Amethyst\Managers\StockManager;
 
 $manager = new StockManager();
 </code></pre>
@@ -301,7 +301,7 @@ $result = $manager-&gt;update($entity, $params);
 
 <p>Define a new instance of the <a href="#manager">Manager</a></p>
 
-<pre><code class="php">use Railken\Amethyst\Managers\StockManager;
+<pre><code class="php">use Amethyst\Managers\StockManager;
 
 $manager = new StockManager();
 </code></pre>
@@ -315,7 +315,7 @@ $result = $manager-&gt;remove($entity);
 
 <p>Once you've got the result you should always check if an error has occurred, if not, retrieve the resource.</p>
 
-<pre><code class="php">use Railken\Amethyst\Managers\StockManager;
+<pre><code class="php">use Amethyst\Managers\StockManager;
 
 $manager = new StockManager();
 
@@ -367,7 +367,7 @@ if ($result-&gt;ok()) {
 
 <h2><a name="schema"></a>Schema</h2>
 
-<p>Base class <code>Railken\Amethyst\Schemas\StockSchema</code></p>
+<p>Base class <code>Amethyst\Schemas\StockSchema</code></p>
 
 <p>The schema is used to define the structure of the attributes. All the $attributes in the <a href="#model">model</a> and in the <a href="#manager">manager</a> are initialized by the schema.</p>
 
@@ -375,7 +375,7 @@ if ($result-&gt;ok()) {
 
 <pre><code class="php">namespace App\Schemas;
 
-use Railken\Amethyst\Schemas\StockSchema as Schema;
+use Amethyst\Schemas\StockSchema as Schema;
 
 class StockSchema extends Schema {
     // ...
@@ -386,11 +386,11 @@ class StockSchema extends Schema {
 
 <h2><a name="repository"></a>Repository</h2>
 
-<p>Base class <code>Railken\Amethyst\Repositories\StockRepository</code></p>
+<p>Base class <code>Amethyst\Repositories\StockRepository</code></p>
 
 <p>The repository is the class used to perform queries.</p>
 
-<pre><code class="php">use Railken\Amethyst\Managers\StockManager;
+<pre><code class="php">use Amethyst\Managers\StockManager;
 
 $manager = new StockManager();
 
@@ -418,7 +418,7 @@ $repository-&gt;findOneById(1);
 
 <pre><code class="php">namespace App\Repositories;
 
-use Railken\Amethyst\Repositories\StockRepository as Repository;
+use Amethyst\Repositories\StockRepository as Repository;
 
 class StockRepository extends Repository {
     // ...
@@ -429,11 +429,11 @@ class StockRepository extends Repository {
 
 <h2><a name="serializer"></a>Serializer</h2>
 
-<p>Base class <code>Railken\Amethyst\Serializers\StockSerializer</code></p>
+<p>Base class <code>Amethyst\Serializers\StockSerializer</code></p>
 
 <p>The serializer is used to serialize an entity, you can retrieve it from the data.</p>
 
-<pre><code class="php">use Railken\Amethyst\Managers\StockManager;
+<pre><code class="php">use Amethyst\Managers\StockManager;
 
 $manager = new StockManager();
 
@@ -451,7 +451,7 @@ $serializer-&gt;serialize($entity)-&gt;toArray(); // Returns an array
 
 <pre><code class="php">namespace App\Serializers;
 
-use Railken\Amethyst\Serializers\StockSerializer as Serializer;
+use Amethyst\Serializers\StockSerializer as Serializer;
 
 class StockSerializer extends Serializer {
     // ...
@@ -462,13 +462,13 @@ class StockSerializer extends Serializer {
 
 <h2><a name="faker"></a>Faker</h2>
 
-<p>Base class <code>Railken\Amethyst\Fakers\StockFaker</code></p>
+<p>Base class <code>Amethyst\Fakers\StockFaker</code></p>
 
 <p>The faker can be used for testing or seeding.</p>
 
 <p>Create a new entity using the faker</p>
 
-<pre><code class="php">use Railken\Amethyst\Fakers\StockFaker;
+<pre><code class="php">use Amethyst\Fakers\StockFaker;
 
 $result = $manager-&gt;create(StockFaker::make()-&gt;parameters());
 </code></pre>
@@ -477,7 +477,7 @@ $result = $manager-&gt;create(StockFaker::make()-&gt;parameters());
 
 <pre><code class="php">namespace App\Fakers;
 
-use Railken\Amethyst\Fakers\StockFaker as Faker;
+use Amethyst\Fakers\StockFaker as Faker;
 
 class StockFaker extends Faker {
     // ...

@@ -1,4 +1,4 @@
-## Railken\Amethyst\Schemas\WarehouseSchema
+## Amethyst\Schemas\WarehouseSchema
 
 The schema is used to define the structure of the attributes. All the $attributes in the [model](model.md) and in the [manager](manager.md) are initialized by the schema.
 
@@ -8,7 +8,7 @@ Create the new schema in `app/Schemas/WarehouseSchema`
 ```php
 namespace App\Schemas;
 
-use Railken\Amethyst\Schemas\WarehouseSchema as Schema;
+use Amethyst\Schemas\WarehouseSchema as Schema;
 
 class WarehouseSchema extends Schema {
 	// ...
