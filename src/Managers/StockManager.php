@@ -6,12 +6,12 @@ use Amethyst\Common\ConfigurableManager;
 use Railken\Lem\Manager;
 
 /**
- * @method \Amethyst\Models\Stock newEntity()
- * @method \Amethyst\Schemas\StockSchema getSchema()
+ * @method \Amethyst\Models\Stock                 newEntity()
+ * @method \Amethyst\Schemas\StockSchema          getSchema()
  * @method \Amethyst\Repositories\StockRepository getRepository()
- * @method \Amethyst\Serializers\StockSerializer getSerializer()
- * @method \Amethyst\Validators\StockValidator getValidator()
- * @method \Amethyst\Authorizers\StockAuthorizer getAuthorizer()
+ * @method \Amethyst\Serializers\StockSerializer  getSerializer()
+ * @method \Amethyst\Validators\StockValidator    getValidator()
+ * @method \Amethyst\Authorizers\StockAuthorizer  getAuthorizer()
  */
 class StockManager extends Manager
 {
