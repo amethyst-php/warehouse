@@ -14,7 +14,7 @@ class CreateWarehousesTable extends Migration
     {
         Schema::create(Config::get('amethyst.warehouse.data.warehouse.table'), function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name')->unique();
+            $table->string('name')->index();
             $table->text('description')->nullable();
             $table->timestamps();
             $table->softDeletes();
