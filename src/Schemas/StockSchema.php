@@ -24,7 +24,7 @@ class StockSchema extends Schema
             Attributes\TextAttribute::make('key'),
             Attributes\NumberAttribute::make('stock')
                 ->setRequired(true),
-            Attributes\EnumAttribute::make('stockable_type', app('amethyst')->getDataNames())
+            \Amethyst\Core\Attributes\DataNameAttribute::make('stockable_type')
                 ->setRequired(true),
             Attributes\MorphToAttribute::make('stockable_id')
                 ->setRelationKey('stockable_type')
